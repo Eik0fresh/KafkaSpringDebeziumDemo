@@ -1,0 +1,19 @@
+{
+    "name": "demo-outbox-connector",
+    "config": {
+        "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+        "plugin.name": "pgoutput",
+        "tasks.max": "2",
+        "database.hostname": "demo-db",
+        "database.port": "5432",
+        "database.user": "postgres",
+        "database.password": "demo123",
+        "database.dbname": "demo",
+        "database.server.name": "demo_user_outbox",
+        "tombstones.on.delete": "false",
+        "table.whitelist": "demo.outbox",
+        "errors.log.enable": "true",
+        "transforms": "outbox",
+        "transforms.outbox.type": "eu.taegener.demo.DebeziumTransformer.CustomTransformation"
+    }
+}
