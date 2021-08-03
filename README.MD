@@ -1,4 +1,4 @@
-# Demo project #
+# Cool Demo project #
 This is a simple demo project to understand how Spring Boot, Kafka, Debezium and PostgreSQL works together.
 
 ## Service demo ##
